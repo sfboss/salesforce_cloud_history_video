@@ -1,0 +1,207 @@
+:root {
+  --ink: #0a0f14;
+  --ink-lift: #111a22;
+  --ink-high: #17232d;
+  --bone: #f0ede5;
+  --bone-muted: #aaa9a3;
+  --copper: #e07a4f;
+  --copper-soft: #b86646;
+  --sage: #87a88b;
+  --line: rgba(240, 237, 229, 0.14);
+  --line-strong: rgba(240, 237, 229, 0.28);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  --display: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "IBM Plex Mono", Menlo, Consolas, monospace;
+  --ease-expo-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-focus: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #030608;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  color: var(--bone);
+}
+
+.stage-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.stage {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  transform-origin: top left;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 72% 18%, rgba(224, 122, 79, 0.11), rgba(224, 122, 79, 0) 30%),
+    radial-gradient(circle at 18% 86%, rgba(135, 168, 139, 0.08), rgba(135, 168, 139, 0) 28%),
+    #0a0f14;
+}
+
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.13'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.stage::after {
+  content: "";
+  position: absolute;
+  inset: 34px;
+  z-index: 19;
+  pointer-events: none;
+  border: 1px solid rgba(240, 237, 229, 0.08);
+}
+
+.record-matte {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #030608;
+  pointer-events: none;
+}
+
+.scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 72px 92px 76px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+  color: var(--copper);
+  font-family: var(--mono);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 42px;
+  height: 2px;
+  background: var(--copper);
+}
+
+.display-title {
+  max-width: 1260px;
+  margin: 0;
+  font-size: 104px;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.lede {
+  max-width: 800px;
+  margin: 0;
+  color: var(--bone-muted);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.45;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-variant-ligatures: none;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.top-rule {
+  height: 1px;
+  margin: 30px 0 0;
+  background: var(--line);
+  transform-origin: left center;
+}
+
+.scene-index {
+  position: absolute;
+  top: 74px;
+  right: 92px;
+  color: var(--bone-muted);
+  font-family: var(--mono);
+  font-size: 16px;
+  letter-spacing: 0.12em;
+}
+
+.micro-label {
+  color: var(--bone-muted);
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.ambient-orb {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(224, 122, 79, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ambient-orb::before,
+.ambient-orb::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(240, 237, 229, 0.08);
+  border-radius: 50%;
+}
+
+.ambient-orb::before {
+  inset: 74px;
+}
+
+.ambient-orb::after {
+  inset: 162px;
+}
+
+.corner-note {
+  position: absolute;
+  right: 96px;
+  bottom: 78px;
+  color: var(--bone-muted);
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

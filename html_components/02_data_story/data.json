@@ -1,0 +1,49 @@
+window.CLIP_DATA = {
+  "duration": 42,
+  "meta": {
+    "title": "A compounding adoption curve",
+    "series": "CLOUD HISTORY / DATA STORY 02",
+    "chapter": "02"
+  },
+  "title": "Adoption compounds when every release improves the service.",
+  "subtitle": "An illustrative curve showing how lower release friction can accelerate product adoption.",
+  "heroStat": {
+    "value": 76,
+    "suffix": "%",
+    "label": "illustrative adoption at year six"
+  },
+  "chart": {
+    "label": "Illustrative adoption index",
+    "values": [
+      { "year": "Y1", "value": 8 },
+      { "year": "Y2", "value": 14 },
+      { "year": "Y3", "value": 25 },
+      { "year": "Y4", "value": 41 },
+      { "year": "Y5", "value": 59 },
+      { "year": "Y6", "value": 76 }
+    ],
+    "annotations": [
+      { "index": 1, "label": "Early proof", "detail": "The service finds repeat users." },
+      { "index": 3, "label": "Feedback effect", "detail": "Usage signals shape faster releases." },
+      { "index": 5, "label": "Compounding", "detail": "Improvements arrive before momentum fades." }
+    ]
+  },
+  "drivers": [
+    { "value": 12, "suffix": "×", "label": "release opportunities", "tone": "copper" },
+    { "value": 3.4, "suffix": "×", "decimals": 1, "label": "feedback cycles", "tone": "sage" }
+  ],
+  "takeaway": {
+    "label": "Read the shape",
+    "text": "The curve bends upward when learning arrives faster than attention disappears.",
+    "note": "Illustrative model, not historical market data."
+  },
+  "timing": {
+    "stat": 3.2,
+    "chart": 6.4,
+    "annotationsStart": 12.2,
+    "annotationGap": 4.3,
+    "drivers": 25.8,
+    "takeaway": 33.2,
+    "outro": 40.5
+  }
+};

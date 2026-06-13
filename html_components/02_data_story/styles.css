@@ -1,0 +1,203 @@
+.data-main {
+  gap: 28px;
+}
+
+.data-header {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 70px;
+  align-items: end;
+}
+
+.data-eyebrow {
+  grid-column: 1 / -1;
+}
+
+.data-title {
+  max-width: 1020px;
+  margin: 22px 0 0;
+  font-size: 65px;
+  font-weight: 800;
+  letter-spacing: -0.052em;
+  line-height: 1;
+}
+
+.data-lede {
+  padding-bottom: 4px;
+  font-size: 22px;
+}
+
+.data-content {
+  display: grid;
+  grid-template-columns: 0.38fr 1.62fr;
+  gap: 38px;
+  flex: 1;
+  min-height: 0;
+}
+
+.stat-panel,
+.chart-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(17, 26, 34, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.stat-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px;
+}
+
+.hero-stat {
+  margin-top: 24px;
+  color: var(--bone);
+  font-size: 116px;
+  font-weight: 850;
+  letter-spacing: -0.08em;
+  line-height: 0.92;
+}
+
+.stat-rule {
+  width: 100%;
+  height: 4px;
+  margin-top: 42px;
+  background: var(--copper);
+  transform-origin: left center;
+}
+
+.chart-panel {
+  padding: 26px 34px 18px;
+}
+
+.chart-label {
+  position: absolute;
+  top: 28px;
+  left: 34px;
+  z-index: 2;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chart-line {
+  fill: none;
+  stroke: var(--copper);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chart-area {
+  fill: rgba(224, 122, 79, 0.11);
+  opacity: 0;
+}
+
+.chart-dot {
+  fill: var(--ink-lift);
+  stroke: var(--sage);
+  stroke-width: 5;
+}
+
+.chart-year {
+  fill: var(--bone-muted);
+  font-family: var(--mono);
+  font-size: 18px;
+}
+
+.annotations {
+  position: absolute;
+  inset: 0;
+}
+
+.annotation {
+  position: absolute;
+  z-index: 3;
+  width: 210px;
+  padding: 13px 14px 14px;
+  border-left: 2px solid var(--sage);
+  background: rgba(10, 15, 20, 0.9);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.annotation strong,
+.annotation span {
+  display: block;
+}
+
+.annotation strong {
+  color: var(--bone);
+  font-size: 17px;
+}
+
+.annotation span {
+  margin-top: 6px;
+  color: var(--bone-muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.drivers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.driver {
+  display: flex;
+  align-items: baseline;
+  gap: 22px;
+  padding: 17px 24px;
+  border-top: 2px solid var(--line-strong);
+  background: rgba(240, 237, 229, 0.035);
+}
+
+.driver-copper {
+  border-top-color: var(--copper);
+}
+
+.driver-sage {
+  border-top-color: var(--sage);
+}
+
+.driver-value {
+  min-width: 110px;
+  color: var(--bone);
+  font-size: 42px;
+  letter-spacing: -0.05em;
+}
+
+.driver span {
+  color: var(--bone-muted);
+  font-size: 19px;
+}
+
+.data-orb {
+  right: -240px;
+  top: -210px;
+}
+
+.data-close {
+  justify-content: center;
+  padding-right: 260px;
+}
+
+.data-takeaway {
+  max-width: 1480px;
+  margin: 48px 0 0;
+  font-size: 82px;
+  font-weight: 800;
+  letter-spacing: -0.058em;
+  line-height: 1.02;
+}
+
+.data-note {
+  margin: 46px 0 0;
+  color: var(--sage);
+  font-size: 18px;
+}

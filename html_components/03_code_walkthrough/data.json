@@ -1,0 +1,60 @@
+window.CLIP_DATA = {
+  "duration": 46,
+  "meta": {
+    "title": "How multi-tenant scope protects data",
+    "series": "CLOUD HISTORY / CODE WALKTHROUGH 03",
+    "chapter": "03"
+  },
+  "title": "One request. One tenant boundary.",
+  "subtitle": "A simplified walkthrough of how tenant context follows a request into the data layer.",
+  "file": "customer-service.js",
+  "language": "javascript",
+  "code": [
+    [{ "text": "async ", "type": "keyword" }, { "text": "function ", "type": "keyword" }, { "text": "listCustomers", "type": "function" }, { "text": "(request) {" }],
+    [{ "text": "  const ", "type": "keyword" }, { "text": "org", "type": "variable" }, { "text": " = request.context.org;" }],
+    [{ "text": "  const ", "type": "keyword" }, { "text": "tenantDb", "type": "variable" }, { "text": " = database.scope(org.id);" }],
+    [{ "text": "" }],
+    [{ "text": "  const ", "type": "keyword" }, { "text": "rows", "type": "variable" }, { "text": " = await ", "type": "keyword" }, { "text": "tenantDb.query", "type": "function" }, { "text": "(" }],
+    [{ "text": "    ", "type": "plain" }, { "text": "\"SELECT id, name FROM customers\"", "type": "string" }],
+    [{ "text": "  );" }],
+    [{ "text": "" }],
+    [{ "text": "  return ", "type": "keyword" }, { "text": "respond", "type": "function" }, { "text": "(rows);" }],
+    [{ "text": "}" }]
+  ],
+  "callouts": [
+    {
+      "line": 2,
+      "label": "01 / Context",
+      "title": "Resolve the tenant",
+      "body": "The authenticated request carries a single organization identity.",
+      "tone": "copper"
+    },
+    {
+      "line": 3,
+      "label": "02 / Scope",
+      "title": "Constrain the data layer",
+      "body": "The database wrapper binds every operation to that tenant boundary.",
+      "tone": "sage"
+    },
+    {
+      "line": 5,
+      "label": "03 / Query",
+      "title": "Execute inside the boundary",
+      "body": "Application code queries normally; the scope remains attached.",
+      "tone": "copper"
+    }
+  ],
+  "takeaway": {
+    "label": "Architecture principle",
+    "text": "Isolation becomes dependable when the boundary is carried by the system, not remembered by every query.",
+    "accent": "Make the safe path the default path."
+  },
+  "timing": {
+    "codeStart": 4.2,
+    "lineGap": 0.32,
+    "calloutsStart": 10.2,
+    "calloutGap": 7.2,
+    "takeaway": 35.6,
+    "outro": 44.5
+  }
+};

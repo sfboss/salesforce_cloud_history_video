@@ -1,0 +1,49 @@
+window.CLIP_DATA = {
+  "duration": 38,
+  "meta": {
+    "title": "Why cloud changed the release cycle",
+    "series": "CLOUD HISTORY / CONCEPT 01",
+    "chapter": "01"
+  },
+  "title": "Cloud turned releases into a feedback loop.",
+  "subtitle": "Software stopped arriving as a finished event. It became a continuously improving service.",
+  "diagram": {
+    "center": "Cloud service",
+    "nodes": ["Build", "Ship", "Observe", "Learn"]
+  },
+  "points": [
+    {
+      "number": "01",
+      "diagramNode": 1,
+      "label": "Shorter distance",
+      "title": "Build",
+      "body": "Teams move from an idea to a live change without a physical release."
+    },
+    {
+      "number": "02",
+      "diagramNode": 3,
+      "label": "Shared surface",
+      "title": "Observe",
+      "body": "Every interaction creates signals about what works and what does not."
+    },
+    {
+      "number": "03",
+      "diagramNode": 4,
+      "label": "Compounding value",
+      "title": "Learn",
+      "body": "Each release informs the next, tightening the loop over time."
+    }
+  ],
+  "takeaway": {
+    "label": "The consequence",
+    "text": "The product is no longer shipped once. It is operated, measured, and improved continuously.",
+    "accent": "Continuously."
+  },
+  "timing": {
+    "diagram": 3.6,
+    "pointsStart": 8,
+    "pointGap": 5.4,
+    "takeaway": 27.4,
+    "outro": 36.4
+  }
+};

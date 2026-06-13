@@ -1,0 +1,37 @@
+window.CLIP_DATA = {
+  "duration": 32,
+  "meta": {
+    "title": "Reference explainer template",
+    "series": "SYSTEM / TEMPLATE",
+    "chapter": "00"
+  },
+  "title": "One idea. Three deliberate beats.",
+  "subtitle": "Clone this folder, then replace only this data file to author a new clip.",
+  "beats": [
+    {
+      "label": "Frame",
+      "title": "State the idea",
+      "body": "Open with a clear claim the viewer can retain."
+    },
+    {
+      "label": "Build",
+      "title": "Show the mechanism",
+      "body": "Use sequential movement to explain what changes."
+    },
+    {
+      "label": "Resolve",
+      "title": "Land the takeaway",
+      "body": "Close on one concise consequence."
+    }
+  ],
+  "takeaway": {
+    "label": "Template rule",
+    "text": "Content changes in data.json. The motion system stays stable."
+  },
+  "timing": {
+    "beatsStart": 6,
+    "beatGap": 4.2,
+    "takeaway": 23.5,
+    "outro": 30.5
+  }
+};
